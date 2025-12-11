@@ -1,0 +1,244 @@
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply text-white antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(43, 77, 172, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(88, 28, 135, 0.15) 0%, transparent 50%),
+      linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Better touch targets for mobile */
+  button, a {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+    touch-action: manipulation;
+  }
+
+  /* Prevent text selection on buttons */
+  button {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Improve scrolling on mobile */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer utilities {
+  /* Liquid Glass - Standard (Enhanced) */
+  .glass {
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.36) 0%,
+      rgba(30, 41, 59, 0.28) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.05),
+      0 8px 32px 0 rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.5s;
+  }
+  
+  .glass:hover::before {
+    left: 100%;
+  }
+  
+  /* Liquid Glass - Strong (for Navigation) */
+  .glass-strong {
+    backdrop-filter: blur(32px) saturate(200%);
+    -webkit-backdrop-filter: blur(32px) saturate(200%);
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.48) 0%,
+      rgba(30, 41, 59, 0.4) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.08),
+      0 12px 48px 0 rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  /* Liquid Glass - Subtle (for small elements) */
+  .glass-subtle {
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.28) 0%,
+      rgba(30, 41, 59, 0.2) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 0 rgba(255, 255, 255, 0.03),
+      0 4px 16px 0 rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.03);
+  }
+  
+  /* Liquid Glass - Ultra Subtle (for backgrounds) */
+  .glass-ultra-subtle {
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    background: rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+      0 2px 8px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@layer components {
+  /* Liquid Glass Morphing Animation - Enhanced */
+  @keyframes liquidMorph {
+    0%, 100% {
+      border-radius: 16px 18px 20px 16px / 20px 16px 18px 18px;
+      transform: scale(1);
+      filter: hue-rotate(0deg);
+    }
+    25% {
+      border-radius: 18px 16px 18px 20px / 18px 20px 16px 18px;
+      transform: scale(1.02);
+      filter: hue-rotate(2deg);
+    }
+    50% {
+      border-radius: 20px 18px 16px 18px / 16px 18px 20px 18px;
+      transform: scale(0.98);
+      filter: hue-rotate(0deg);
+    }
+    75% {
+      border-radius: 18px 20px 18px 16px / 18px 16px 18px 20px;
+      transform: scale(1.01);
+      filter: hue-rotate(-2deg);
+    }
+  }
+  
+  /* Liquid Glass Shimmer Effect */
+  @keyframes liquidShimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  
+  .liquid-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: liquidShimmer 3s ease-in-out infinite;
+  }
+  
+  /* Liquid Glass Glow Effect */
+  @keyframes liquidGlow {
+    0%, 100% {
+      box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+        0 8px 32px 0 rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.05);
+    }
+    50% {
+      box-shadow: 
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 12px 40px 0 rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  /* Prose styles for blog content */
+  .prose {
+    @apply text-white/90;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-bold mb-4 mt-8;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold mb-3 mt-6;
+  }
+
+  .prose h3 {
+    @apply text-xl font-bold mb-2 mt-4;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose ul, .prose ol {
+    @apply mb-4 ml-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose code {
+    @apply bg-white/10 px-2 py-1 rounded text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply bg-white/10 p-4 rounded-lg mb-4 overflow-x-auto;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+  }
+
+  .prose a {
+    @apply text-white/80 underline hover:text-white;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-white/20 pl-4 italic text-white/70;
+  }
+}

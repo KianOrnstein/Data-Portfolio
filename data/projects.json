@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Financial Risk Analysis Dashboard",
+    "description": "Real-time risk monitoring system with ML-powered predictions for Apple Inc. in 2024",
+    "tech": ["Python", "React", "TensorFlow", "PostgreSQL"],
+    "category": "Data Science",
+    "slug": "financial-risk-analysis-apple-2024",
+    "externalUrl": "https://your-blogger-or-substack-url.com/financial-risk-analysis"
+  },
+  {
+    "title": "Market Sentiment Analyzer",
+    "description": "NLP-based sentiment analysis for stock market trends",
+    "tech": ["Python", "NLP", "FastAPI", "Docker"],
+    "category": "AI/ML",
+    "slug": "market-sentiment-analyzer",
+    "externalUrl": "https://your-blogger-or-substack-url.com/market-sentiment"
+  },
+  {
+    "title": "Portfolio Optimization Tool",
+    "description": "Advanced portfolio rebalancing using modern portfolio theory",
+    "tech": ["Python", "QuantLib", "React", "TypeScript"],
+    "category": "Finance",
+    "slug": "portfolio-optimization-tool",
+    "externalUrl": "https://your-blogger-or-substack-url.com/portfolio-optimization"
+  },
+  {
+    "title": "Cryptocurrency Trading Bot",
+    "description": "Automated trading system with backtesting capabilities",
+    "tech": ["Python", "ccxt", "Pandas", "WebSocket"],
+    "category": "Trading",
+    "slug": "cryptocurrency-trading-bot",
+    "externalUrl": "https://your-blogger-or-substack-url.com/crypto-bot"
+  },
+  {
+    "title": "Credit Scoring Model",
+    "description": "Machine learning model for credit risk assessment",
+    "tech": ["Python", "Scikit-learn", "XGBoost", "Flask"],
+    "category": "Risk Management",
+    "slug": "credit-scoring-model",
+    "externalUrl": "https://your-blogger-or-substack-url.com/credit-scoring"
+  },
+  {
+    "title": "Real-time Data Pipeline",
+    "description": "ETL pipeline for processing financial market data",
+    "tech": ["Python", "Apache Kafka", "Spark", "MongoDB"],
+    "category": "Data Engineering",
+    "slug": "real-time-data-pipeline",
+    "externalUrl": "https://your-blogger-or-substack-url.com/data-pipeline"
+  }
+]
+

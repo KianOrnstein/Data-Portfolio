@@ -1,0 +1,35 @@
+{
+  "vn": [
+    {
+      "period": "Hiện tại",
+      "title": "Sinh viên",
+      "company": "Học Viện Tài Chính",
+      "description": "Đang theo học chuyên ngành Tài chính tại Học Viện Tài Chính, Hà Nội, Việt Nam.",
+      "location": "Hà Nội, Việt Nam"
+    },
+    {
+      "period": "Trước đó",
+      "title": "Học sinh",
+      "company": "THPT Nguyễn Trãi - Ba Đình",
+      "description": "Tốt nghiệp Trung học phổ thông tại trường THPT Nguyễn Trãi, quận Ba Đình, Hà Nội.",
+      "location": "Hà Nội, Việt Nam"
+    }
+  ],
+  "en": [
+    {
+      "period": "Present",
+      "title": "Student",
+      "company": "Academy of Finance",
+      "description": "Currently studying Finance at Academy of Finance, Hanoi, Vietnam.",
+      "location": "Hanoi, Vietnam"
+    },
+    {
+      "period": "Previously",
+      "title": "High School Student",
+      "company": "Nguyen Trai High School - Ba Dinh",
+      "description": "Graduated from Nguyen Trai High School, Ba Dinh District, Hanoi.",
+      "location": "Hanoi, Vietnam"
+    }
+  ]
+}
+

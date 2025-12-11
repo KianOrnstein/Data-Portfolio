@@ -1,0 +1,67 @@
+{
+  "name": {
+    "default": {
+      "vn": "Phạm Đức Kiên",
+      "en": "Kien Duc Pham"
+    },
+    "alternatives": {
+      "vn": ["Kian Pham", "Kian Dominic Pham", "Kien Duc Pham"],
+      "en": ["Kian Pham", "Kian Dominic Pham", "Phạm Đức Kiên"]
+    }
+  },
+  "email": "phamduckien205@gmail.com",
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kien-duc-p-434257290/",
+      "icon": "💼"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/KianOrnstein",
+      "icon": "💻"
+    },
+    {
+      "name": "Blogger",
+      "url": "https://kianalytics.blogspot.com/",
+      "icon": "📝"
+    }
+  ],
+  "metrics": [
+    {
+      "label": {
+        "vn": "Dự án hoàn thành",
+        "en": "Projects Completed"
+      },
+      "value": 24,
+      "suffix": "+"
+    },
+    {
+      "label": {
+        "vn": "Điểm dữ liệu phân tích",
+        "en": "Data Points Analyzed"
+      },
+      "value": 10,
+      "suffix": "M+"
+    },
+    {
+      "label": {
+        "vn": "Năm kinh nghiệm",
+        "en": "Years Experience"
+      },
+      "value": 5,
+      "suffix": "+"
+    }
+  ],
+  "about": {
+    "vn": {
+      "title": "Về tôi",
+      "content": "Tôi là Phạm Đức Kiên, một chuyên gia về Tài chính và Phân tích Dữ liệu. Với niềm đam mê về công nghệ và tài chính, tôi chuyên về phân tích rủi ro tài chính, machine learning trong tài chính, và xây dựng các dashboard phân tích dữ liệu. Tôi hiện đang theo học tại Học Viện Tài Chính và có kinh nghiệm trong việc phát triển các ứng dụng tài chính sử dụng Python, React, và các công nghệ hiện đại khác."
+    },
+    "en": {
+      "title": "About Me",
+      "content": "I am Pham Duc Kien, a Finance and Data Analytics professional. With a passion for technology and finance, I specialize in financial risk analysis, machine learning in finance, and building data analytics dashboards. I am currently studying at the Academy of Finance and have experience in developing financial applications using Python, React, and other modern technologies."
+    }
+  }
+}
+

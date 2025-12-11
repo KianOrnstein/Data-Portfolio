@@ -1,0 +1,60 @@
+{
+  "hardSkills": [
+    {
+      "name": "PowerBI",
+      "category": "Data Visualization",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/powerbi"
+    },
+    {
+      "name": "Python",
+      "category": "Programming",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/python"
+    },
+    {
+      "name": "R",
+      "category": "Programming",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/r"
+    },
+    {
+      "name": "Tableau",
+      "category": "Data Visualization",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/tableau"
+    },
+    {
+      "name": "Excel",
+      "category": "Data Analysis",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/excel"
+    },
+    {
+      "name": "Phân tích tài chính",
+      "category": "Finance",
+      "proofType": "url",
+      "proof": "https://your-proof-url.com/financial-analysis"
+    },
+    {
+      "name": "IELTS",
+      "category": "Language",
+      "proofType": "pdf",
+      "proof": "/cv/ielts.pdf"
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Quản lý thời gian",
+      "nameEn": "Time Management"
+    },
+    {
+      "name": "Làm việc nhóm",
+      "nameEn": "Teamwork"
+    },
+    {
+      "name": "Tư duy phản biện",
+      "nameEn": "Critical Thinking"
+    }
+  ]
+}
