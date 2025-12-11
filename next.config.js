@@ -30,6 +30,10 @@ const nextConfig = {
   images: {
     unoptimized: process.env.GITHUB_PAGES === 'true',
   },
+  // Environment variables for client-side
+  env: {
+    NEXT_PUBLIC_BASE_PATH: process.env.BASE_PATH || '',
+  },
 }
 
 module.exports = nextConfig

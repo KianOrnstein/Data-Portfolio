@@ -46,9 +46,12 @@ jobs:
           GITHUB_PAGES: 'true'
           NODE_ENV: 'production'
           BASE_PATH: ${{ steps.base_path.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.base_path.outputs.base_path }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -20,13 +20,20 @@
 
 ## Bước 2: Cấu hình GitHub Pages
 
+⚠️ **QUAN TRỌNG**: Bạn PHẢI enable GitHub Pages trước khi workflow chạy!
+
 1. **Vào Settings của repository**:
    - Click vào tab **Settings** trong repository
    - Scroll xuống phần **Pages** (bên trái menu)
 
-2. **Cấu hình Source**:
-   - **Source**: Chọn **GitHub Actions**
+2. **Enable GitHub Pages**:
+   - **Source**: Chọn **GitHub Actions** (hoặc **Deploy from a branch** tạm thời, sau đó đổi lại)
+   - Nếu không thấy option, click **"Enable GitHub Actions"** hoặc **"Configure"**
    - Lưu lại
+
+3. **Kiểm tra**:
+   - Đảm bảo bạn thấy message: "Your site is ready to be published" hoặc tương tự
+   - Nếu vẫn lỗi, thử chọn **"Deploy from a branch"** → **main** → **/ (root)** → Save, sau đó đổi lại thành **GitHub Actions**
 
 ## Bước 3: Kích hoạt GitHub Actions
 

@@ -3,7 +3,6 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import GlassCard from './GlassCard'
 import NameDropdown from './NameDropdown'
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { getProfile } from '@/lib/profile'
 
@@ -60,14 +59,12 @@ export default function Hero() {
           <div className="flex justify-center order-2 lg:order-1">
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden glass-strong flex items-center justify-center" style={{ backdropFilter: 'blur(32px) saturate(200%)', WebkitBackdropFilter: 'blur(32px) saturate(200%)' }}>
               {!imageError ? (
-                <Image
-                  src="/profile.jpg"
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/profile.jpg`}
                   alt="Phạm Đức Kiên"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, 320px"
+                  className="w-full h-full object-cover"
                   onError={() => setImageError(true)}
+                  loading="eager"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-white/60 text-4xl sm:text-5xl md:text-6xl font-bold">
