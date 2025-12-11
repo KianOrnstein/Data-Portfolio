@@ -3,6 +3,7 @@ import GlassCard from '@/components/GlassCard'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import CanvasBackground from '@/components/CanvasBackground'
+import { getExperiences } from '@/lib/experiences'
 
 const experiences: Record<string, {
   period: string
@@ -58,6 +59,14 @@ The rigorous academic environment at Nguyen Trai High School prepared me well fo
       'Graduated with honors'
     ]
   }
+}
+
+export async function generateStaticParams() {
+  // Return slugs from the hardcoded experiences object
+  // This matches the actual data structure used in the component
+  return Object.keys(experiences).map((slug) => ({
+    slug,
+  }))
 }
 
 export default async function ExperienceDetail({ params }: { params: Promise<{ slug: string }> }) {

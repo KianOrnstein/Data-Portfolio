@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation'
 import CanvasBackground from '@/components/CanvasBackground'
 import TechBadge from '@/components/TechBadge'
+import { getProjects } from '@/lib/projects'
 
 const projects: Record<string, {
   title: string
@@ -19,6 +20,14 @@ const projects: Record<string, {
     category: 'Data Science',
     content: 'financial-risk-analysis-apple-2024'
   }
+}
+
+export async function generateStaticParams() {
+  const allProjects = getProjects()
+  
+  return allProjects.map((project) => ({
+    slug: project.slug,
+  }))
 }
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
