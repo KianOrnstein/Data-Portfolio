@@ -64,18 +64,7 @@ export default function SkillItem({ skill, isHardSkill, language }: SkillItemPro
             continue
           }
         }
-        // Try API
-        try {
-          const response = await fetch('/api/cv?type=ielts')
-          if (response.ok) {
-            const data = await response.json()
-            if (data.cvUrl) {
-              setPdfUrl(data.cvUrl)
-            }
-          }
-        } catch {
-          // API not available
-        }
+        // Static export doesn't support API routes, so we only try direct file access
       }
       checkIeltsFile()
     } else if (hardSkill && hardSkill.proofType === 'pdf') {

@@ -29,21 +29,7 @@ export default function Resume() {
         }
       }
       
-      // If no common name found, try to fetch list from API
-      try {
-        const response = await fetch('/api/cv')
-        if (response.ok) {
-          const data = await response.json()
-          if (data.cvUrl) {
-            setCvUrl(data.cvUrl)
-            setLoading(false)
-            return
-          }
-        }
-      } catch {
-        // API not available, continue
-      }
-      
+      // Static export doesn't support API routes, so we only try direct file access
       setLoading(false)
     }
 

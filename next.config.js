@@ -17,8 +17,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Use SWC minify for faster builds
-  swcMinify: true,
   // Suppress source map warnings
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
