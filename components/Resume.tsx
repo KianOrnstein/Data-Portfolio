@@ -3,6 +3,7 @@
 import { useLanguage } from '@/contexts/LanguageContext'
 import GlassCard from './GlassCard'
 import { useEffect, useState } from 'react'
+import { getFetchPath } from '@/lib/paths'
 
 export default function Resume() {
   const { t } = useLanguage()
@@ -18,9 +19,10 @@ export default function Resume() {
       // Try common names first
       for (const name of possibleNames) {
         try {
-          const response = await fetch(`/cv/${name}`, { method: 'HEAD' })
+          const cvPath = getFetchPath(`cv/${name}`)
+          const response = await fetch(cvPath, { method: 'HEAD' })
           if (response.ok) {
-            setCvUrl(`/cv/${name}`)
+            setCvUrl(cvPath)
             setLoading(false)
             return
           }

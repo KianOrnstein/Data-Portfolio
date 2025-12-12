@@ -5,6 +5,7 @@ import GlassCard from './GlassCard'
 import NameDropdown from './NameDropdown'
 import { useState, useEffect } from 'react'
 import { getProfile } from '@/lib/profile'
+import { getAssetPath } from '@/lib/paths'
 
 function MetricCard({ metric }: { metric: { label: string; value: number; prefix?: string; suffix?: string } }) {
   return (
@@ -60,7 +61,7 @@ export default function Hero() {
             <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden glass-strong flex items-center justify-center" style={{ backdropFilter: 'blur(32px) saturate(200%)', WebkitBackdropFilter: 'blur(32px) saturate(200%)' }}>
               {!imageError ? (
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/profile.jpg`}
+                  src={getAssetPath('profile.jpg')}
                   alt="Phạm Đức Kiên"
                   className="w-full h-full object-cover"
                   onError={() => setImageError(true)}

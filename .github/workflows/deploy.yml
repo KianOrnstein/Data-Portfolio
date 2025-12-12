@@ -34,19 +34,15 @@ jobs:
       - name: Determine base path
         id: base_path
         run: |
-          if [ "${{ github.event.repository.name }}" = "${{ github.repository_owner }}.github.io" ]; then
-            echo "base_path=" >> $GITHUB_OUTPUT
-          else
-            echo "base_path=/${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
-          fi
+          echo "base_path=" >> $GITHUB_OUTPUT
 
       - name: Build static site
         run: npm run build:static
         env:
           GITHUB_PAGES: 'true'
           NODE_ENV: 'production'
-          BASE_PATH: ${{ steps.base_path.outputs.base_path }}
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.base_path.outputs.base_path }}
+          BASE_PATH: ''
+          NEXT_PUBLIC_BASE_PATH: ''
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -3,6 +3,12 @@ import path from 'path'
 
 const cvDirectory = path.join(process.cwd(), 'public/cv')
 
+// Get base path for server-side rendering
+// This will be used when building static pages
+function getBasePath(): string {
+  return process.env.NEXT_PUBLIC_BASE_PATH || process.env.BASE_PATH || ''
+}
+
 // Common CV file names to check
 const possibleNames = ['cv.pdf', 'resume.pdf', 'CV.pdf', 'Resume.pdf', 'curriculum-vitae.pdf']
 
@@ -15,10 +21,11 @@ export function getCvPath(): string | null {
   }
 
   // First, try common names
+  const basePath = getBasePath()
   for (const name of possibleNames) {
     const filePath = path.join(cvDirectory, name)
     if (fs.existsSync(filePath)) {
-      return `/cv/${name}`
+      return basePath ? `${basePath}/cv/${name}` : `/cv/${name}`
     }
   }
 
@@ -27,7 +34,7 @@ export function getCvPath(): string | null {
     const files = fs.readdirSync(cvDirectory)
     const pdfFile = files.find(file => file.toLowerCase().endsWith('.pdf'))
     if (pdfFile) {
-      return `/cv/${pdfFile}`
+      return basePath ? `${basePath}/cv/${pdfFile}` : `/cv/${pdfFile}`
     }
   } catch {
     return null
@@ -42,10 +49,11 @@ export function getIeltsPath(): string | null {
   }
 
   // Try common IELTS names
+  const basePath = getBasePath()
   for (const name of ieltsNames) {
     const filePath = path.join(cvDirectory, name)
     if (fs.existsSync(filePath)) {
-      return `/cv/${name}`
+      return basePath ? `${basePath}/cv/${name}` : `/cv/${name}`
     }
   }
 

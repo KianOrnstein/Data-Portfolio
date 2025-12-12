@@ -18,6 +18,25 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.jks
+
+# Personal files (keep only what's needed in public/)
+*.jpg
+!public/profile.jpg
+*.jpeg
+!public/*.jpeg
+*.png
+!public/*.png
+*.pdf
+!public/cv/*.pdf
+
+# Sensitive data
+secrets/
+credentials/
+*.secret
+*.confidential
 
 # debug
 npm-debug.log*

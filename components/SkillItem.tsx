@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import GlassCard from './GlassCard'
 import { HardSkill, SoftSkill } from '@/lib/skills'
+import { getFetchPath, getAssetPath } from '@/lib/paths'
 
 interface SkillItemProps {
   skill: HardSkill | SoftSkill
@@ -55,9 +56,10 @@ export default function SkillItem({ skill, isHardSkill, language }: SkillItemPro
         const possibleNames = ['ielts.pdf', 'IELTS.pdf', 'ielts-certificate.pdf', 'IELTS-certificate.pdf']
         for (const name of possibleNames) {
           try {
-            const response = await fetch(`/cv/${name}`, { method: 'HEAD' })
+            const cvPath = getFetchPath(`cv/${name}`)
+            const response = await fetch(cvPath, { method: 'HEAD' })
             if (response.ok) {
-              setPdfUrl(`/cv/${name}`)
+              setPdfUrl(cvPath)
               return
             }
           } catch {
@@ -68,7 +70,13 @@ export default function SkillItem({ skill, isHardSkill, language }: SkillItemPro
       }
       checkIeltsFile()
     } else if (hardSkill && hardSkill.proofType === 'pdf') {
-      setPdfUrl(hardSkill.proof)
+      // If proof is a relative path (starts with /), use getAssetPath
+      // Otherwise, it's an absolute URL, use as is
+      if (hardSkill.proof.startsWith('/')) {
+        setPdfUrl(getAssetPath(hardSkill.proof.slice(1)))
+      } else {
+        setPdfUrl(hardSkill.proof)
+      }
     }
   }, [hardSkill])
 
