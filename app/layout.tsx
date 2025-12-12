@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import PageLoader from '@/components/PageLoader'
+import PreloadAssets from '@/components/PreloadAssets'
 
 export const metadata: Metadata = {
   title: 'Pham Duc Kien',
@@ -23,9 +25,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body>
+        <PreloadAssets />
         <ThemeProvider>
           <LanguageProvider>
-            {children}
+            <PageLoader>
+              {children}
+            </PageLoader>
           </LanguageProvider>
         </ThemeProvider>
       </body>
